@@ -106,7 +106,7 @@ h1 {
 
   </div>
 
-  <div v-click="5">
+  <div v-click="5" >
 
   - 普段使っているメッセージアプリを使いたい！
 
@@ -159,46 +159,46 @@ h1 {
 </style>
 
 
+---
+
+# パイプ BOT が解決する問題
+
+<div class="text-2xl py-6">
+
+  <div v-click="1">
+
+  - **普段使っているメッセージアプリ**を使って、**全員**に情報伝達ができる！
+
+    <div v-click="2">
+
+    - わざわざ新しいメッセージアプリに登録したり、使い方を覚える必要がない！
+
+    </div>
+
+  </div>
+
+  <div v-click="3">
+
+  - メッセージアプリの機能の差を吸収
+
+    <div v-click="4">
+
+    - メッセージアプリ固有の機能のせいで会話が噛み合わなくなることを軽減する
+
+    </div>
+
+  </div>
+
+</div>
 
 ---
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# 仮
 
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+Lorem ipusm dolor sit amet, consectetur adipiscing elit.
 
 ---
 
