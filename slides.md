@@ -185,7 +185,7 @@ h1 {
 
   <div v-click="4">
 
-  - 一つメッセージアプリだけでも、さらに便利に
+  - ひとつのメッセージアプリだけでも、さらに便利に使える
 
     - より高度なメッセージ管理が可能になる
 
@@ -199,7 +199,7 @@ h1 {
 
 <div class="">
 
-<img class="object-cover h-md mx-auto" src="/diagram1.png">
+<img class="object-cover h-md mx-auto" src="/diagram-1.png">
 
 </div>
 
@@ -209,7 +209,7 @@ h1 {
 
 <div class="">
 
-<img class="object-cover h-md mx-auto" src="/diagram2.png">
+<img class="object-cover h-md mx-auto" src="/diagram-2.png">
 
 </div>
 
@@ -221,34 +221,29 @@ h1 {
 
 ---
 
-# Components
+# 便利な使い方
+ひとつのメッセージアプリのみを使う場合でもさらに便利に
 
-<div grid="~ cols-2 gap-4">
-<div>
+<div class="flex">
 
-You can use Vue components directly inside your slides.
+<div class="flex-1">
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+## アナウンス専用グループ
 
-```html
-<Counter :count="10" />
-```
+<div class="mr-4">
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+現状の LINE には、グループごとにプロフィールを変更する機能や役職機能がないため、部活などのグループで、誰が部長なのかわかりにくいという問題がある。
 
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+そこで、パイプ BOT のプロフィール変換機能を利用することで、自分のアナウンス専用グループに送ったメッセージを、部活のグループにわかりやすく転送することができるようになる。
 
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
+このように使うことで、わざわざプロフィールに本名や役職名を書く必要がなくなる。
 
 </div>
+
+</div>
+
+<img class="object-cover h-md mx-auto" src="/diagram-3.png" />
+
 </div>
 
 
