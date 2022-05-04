@@ -181,24 +181,43 @@ h1 {
 
   - メッセージアプリの機能の差を吸収
 
-    <div v-click="4">
+  </div>
 
-    - メッセージアプリ固有の機能のせいで会話が噛み合わなくなることを軽減する
+  <div v-click="4">
 
-    </div>
+  - 一つメッセージアプリだけでも、さらに便利に
+
+    - より高度なメッセージ管理が可能になる
 
   </div>
 
 </div>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+
+# LINE と Discord をつなぐ例 1
+
+<div class="">
+
+<img class="object-cover h-md mx-auto" src="/diagram1.png">
+
+</div>
+
 ---
 
-# 仮
+# LINE と Discord をつなぐ例 2
 
-Lorem ipusm dolor sit amet, consectetur adipiscing elit.
+<div class="">
+
+<img class="object-cover h-md mx-auto" src="/diagram2.png">
+
+</div>
+
+---
+
+# プロトタイプの動作の様子
+
+<img class="object-cover h-md mx-auto" src="/prototype-1.png" />
 
 ---
 
