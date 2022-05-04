@@ -1,9 +1,9 @@
 ---
 # try also 'default' to start simple
-theme: seriph
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: /low-poly-grid-haikei.svg
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -12,26 +12,20 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## パイプBOT 解説スライド
+  パイプ BOT のプレゼンテーション
 
-  Learn more at [Sli.dev](https://sli.dev)
 # persist drawings in exports and build
 drawings:
   persist: false
+
 ---
 
-# Welcome to Slidev
+# パイプ BOT (仮称) 
 
-Presentation slides for developers
+複数のメッセージアプリの会話を繋げる BOT サービス
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
+<!-- <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
@@ -39,7 +33,7 @@ Presentation slides for developers
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
-</div>
+</div> -->
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
@@ -47,29 +41,29 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# What is Slidev?
+<h1 class="font-bold"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">パイプ BOT</span> とは？ </h1>
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+複数のメッセージアプリの会話を繋げる BOT サービス。
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+## 特長
 
-<br>
-<br>
+<br />
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<p class="text-2xl">
+<v-clicks>
+
+- LINE や Discord など、異なるメッセージアプリ間でメッセージを送ることができる！
+- メッセージアプリの機能として提供されている、BOT 機能を利用するので、普段の使い慣れているメッセージアプリを使い続けることができる！
+
+</v-clicks>
+</p>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
-<style>
+<!-- <style>
 h1 {
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
@@ -79,30 +73,92 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-</style>
+</style> -->
 
 ---
 
-# Navigation
+# 現状のメッセージアプリの問題点
+さまざまなメッセージアプリが存在するが...
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<!-- ## 社会的な点 -->
 
-### Keyboard Shortcuts
+<div class="text-2xl py-8">
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+<div v-click="1">
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+- 必ずしも、全員が同じメッセージアプリを使っている/使える訳ではない
+
+  <div v-click="2">
+
+    - 電話番号やスマホを持っていなければ LINE はできない 
+
+  </div>
+
+</div>
+
+<div v-click="3">
+
+- 全員に対して情報伝達をしなければならない状況がある (特に学生)
+
+  <div v-click="4">
+
+  - 全員が使っているメッセージアプリはあまりない
+
+  </div>
+
+  <div v-click="5">
+
+  - 普段使っているメッセージアプリを使いたい！
+
+  </div>
+
+
+</div>
+
+</div>
+ 
+
+---
+
+# スムーズに情報伝達をするためには？
+全員が同じツールを使うことができない状況
+
+<div class="text-2xl py-6">
+
+<div v-click="1">
+
+- メールを使う
+
+  <div v-click="2">
+
+  - 情報伝達でメールは使い慣れていない
+    - 伝わらない？
+    - メール見ない？
+
+  </div>
+
+</div>
+
+<div v-click="3">
+
+- 電話？
+
+  <div v-click="4">
+
+  - 多人数に連絡するには不便
+    - 時間、場所が限定されてしまう
+
+  </div>
+
+</div>
+
+</div>
+ 
+<style>
+
+</style>
+
+
 
 ---
 layout: image-right
