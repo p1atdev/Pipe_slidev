@@ -1,24 +1,15 @@
 ---
-# try also 'default' to start simple
 theme: default
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: /low-poly-grid-haikei.svg
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
+class: text-center
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
   ## パイプBOT 解説スライド
   パイプ BOT のプレゼンテーション
-
-# persist drawings in exports and build
 drawings:
   persist: false
-
+title: パイプ BOT (仮称)
 ---
 
 # パイプ BOT (仮称) 
@@ -80,6 +71,7 @@ h1 {
 # 現状のメッセージアプリの問題点
 さまざまなメッセージアプリが存在するが...
 
+## 多人数に情報を伝える際には不便なことがある
 
 <div class="text-2xl py-8">
 
@@ -95,43 +87,40 @@ h1 {
 
 </div>
 
-<div v-click="3">
+<!-- <div v-click="3"> -->
 
-- 全員に対して情報伝達をしなければならない状況がある (特に学生)
-
-  <div v-click="4">
+  <div v-click="3">
 
   - 全員が使っているメッセージアプリはあまりない
 
   </div>
 
-  <div v-click="5" >
+  <div v-click="4" >
 
   - 普段使っているメッセージアプリを使いたい！
 
   </div>
 
-</div>
+<!-- </div> -->
 
 </div>
  
 
 ---
 
-# スムーズに情報伝達をするためには？
-全員が同じツールを使うことができない状況
+# 全員が使っているツールは？
 
 <div class="text-2xl py-6">
 
 <div v-click="1">
 
-- メールを使う
+- メール
 
   <div v-click="2">
 
-  - 情報伝達でメールは使い慣れていない
-    - 伝わらない？
-    - メール見ない？
+  - 情報伝達でメールは使い慣れていない人が多そう
+    - メール見ない
+    - 通知に気づきにくい
 
   </div>
 
@@ -139,7 +128,7 @@ h1 {
 
 <div v-click="3">
 
-- 電話？
+- 電話
 
   <div v-click="4">
 
@@ -179,9 +168,15 @@ h1 {
 
   - メッセージアプリの機能の差を吸収
 
+  <div v-click="4">
+
+   - LINE のスタンプなど
+
   </div>
 
-  <div v-click="4">
+  </div>
+
+  <div v-click="5">
 
   - ひとつのメッセージアプリだけでも、さらに便利に使える
 
@@ -244,7 +239,7 @@ h1 {
 
 </div>
 
---- 
+---
 
 
 # パイプ BOT の実装
@@ -323,7 +318,6 @@ h1 {
 ---
 
 # サービス形態の案
-コストの点から、個人でこれを運営するのはまず不可能であると考えた
 
 <div class="text-2xl py-4">
 
@@ -364,11 +358,8 @@ h1 {
 
 <br />
 
-- コスト的な問題から、パイプ BOT は個人で運営することが難しい
+- コスト的な問題から、パイプ BOT は個人で運営することは難しい
 
   - **OSS として公開**したり、BOT やアカウントだけはユーザーに自分で取得させる形態で公開？
 
 </div>
-
-
-
