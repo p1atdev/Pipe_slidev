@@ -80,7 +80,6 @@ h1 {
 # 現状のメッセージアプリの問題点
 さまざまなメッセージアプリが存在するが...
 
-<!-- ## 社会的な点 -->
 
 <div class="text-2xl py-8">
 
@@ -111,7 +110,6 @@ h1 {
   - 普段使っているメッセージアプリを使いたい！
 
   </div>
-
 
 </div>
 
@@ -246,208 +244,131 @@ h1 {
 
 </div>
 
+--- 
 
----
-class: px-20
----
 
-# Themes
+# パイプ BOT の実装
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+<div class="flex text-2xl py-2">
 
-<div grid="~ cols-2 gap-2" m="-t-2">
+<div class="flex-1">
 
-```yaml
----
-theme: default
----
-```
+## プロトタイプ
 
-```yaml
----
-theme: seriph
----
-```
+- Node.js (JavaScript)
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
+- Heroku
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
+- Firebase
+  - Firestore 
+  - Cloud Storage
 
 </div>
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
----
-preload: false
----
+<div class="flex-1">
 
-# Animations
+## 正式実装 (予定)
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+- Node.js (**TypeScript**)
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
+- Railway? Heroku? Cloud Run?
+
+- **PlanetScale**
+
+- **Cloudinary**
+
+### 設定/管理アプリ
+
+- Next.js? Blitz.js?
+- Chakra UI? MUI?
+
 </div>
-```
 
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
+</div>
+
+---
+
+# プロトタイプ時点でのパイプ BOT の課題
+
+<div class="text-2xl py-4">
+
+  <div v-click="1">
+
+  - 特殊なイベントのハンドル
+
+    <div v-click="2">
+
+    - メッセージアプリごとに固有の機能やイベントがあり、それらを吸収するための工夫が必要
+      - 物によっては大量にデータを保存しないといけないものもある...
+
+    </div>
+
   </div>
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div v-click="3">
+
+  - <span class="text-4xl">**コスト**</span>
+
+    <div class="text-3xl" v-click="4">
+
+    - LINE Messaging API がめちゃくちゃ高い
+
+    </div>
+
   </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
 
 </div>
 
 ---
 
-# LaTeX
+# サービス形態の案
+コストの点から、個人でこれを運営するのはまず不可能であると考えた
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+<div class="text-2xl py-4">
 
-<br>
+<div v-click="1">
 
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
+  - OSS として公開し、各自で自分のパイプ BOT を動かすことができるようにする
+    - [Strapi](https://strapi.io/) などのような形式
+    - コストを抑えられる
 
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+<div v-click="2">
 
+  - ユーザーが自分で必要な BOT の API キーを取得し、BOT の実行自体はこちら側に任せる形態
+    - LINE BOT サービスの [hachidori](https://hachidori.io/) はこのような形態
+    - こちらもコストを抑えられる
+
+</div>
+
+</div>
 
 ---
-layout: center
-class: text-center
----
 
-# Learn More
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+# まとめ
+
+<div class="text-2xl">
+
+- 多人数に情報を伝達する際、全員に伝えることが難しい場合がある
+
+<br />
+
+- パイプ BOT がその問題を軽減、解決できる
+
+  - パイプ BOT は**複数のメッセージアプリ間の会話を繋げる**ことができる！
+
+  - ひとつのメッセージアプリだけでも、**さらに便利に**使えるようになる！
+
+<br />
+
+- コスト的な問題から、パイプ BOT は個人で運営することが難しい
+
+  - **OSS として公開**したり、BOT やアカウントだけはユーザーに自分で取得させる形態で公開？
+
+</div>
+
+
+
